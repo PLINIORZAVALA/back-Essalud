@@ -10,10 +10,11 @@ import { userEntity } from './entity/user.entity'; // Asegúrate de que la ruta 
       port: 3306,
       username: 'root',
       password: '', 
-      database: 'voluntariado_db',
+      database: 'voluntario_db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
     }),
+    userEntity,
   ],
 })
 export class AppModule {}
