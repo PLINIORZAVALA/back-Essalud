@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { userEntity } from './entity/user.entity'; // Asegúrate de que la ruta sea correcta
+import { UserModule } from 'src/modulos/user/user.module'//Faltaba vincular la direccion 
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { userEntity } from './entity/user.entity'; // Asegúrate de que la ruta 
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
     }),
-    userEntity,
+    UserModule, // Importa el módulo en lugar de la entidad
   ],
 })
 export class AppModule {}
